@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<div class="container mt-2">
+    <h2>Register Form</h2>
+    <p> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptate culpa cumque veniam laudantium maiores dolor ipsa, autem vel, itaque, repudiandae est illum! 
+        Placeat eius sequi ut reprehenderit non earum porro.
+         </p>
+
+</div>
+
+
+
+
+<div class="row mt-3 mb-3">
+    <div class="col-4 mt-2 text-center" >
+        <!--image-->
+        <img class="m-4" height="300px" width="400px" src="https://images.livemint.com/img/2021/01/13/600x338/LSpic_1610550463782_1610550472859.jpg" alt="">
+        <button class="btn btn-warning mt-2">
+            back
+        </button>
+    </div>
+    <div class="col-5 mt-5">
+        <form  (ngSubmit)="register()"   [formGroup]="registerForm" class="border p-5 mt-5 me-5" >
+            <div>
+                <div >
+                    <input name="uname" formControlName="uname"  placeholder="User Name" class="form-control " type="text">
+                </div>
+
+                <!--invalid userName-->
+            <div *ngIf="this.registerForm.get('uname')?.errors&&this.registerForm.get('uname')?.touched" class="text-danger mb-2">
+
+               Invalid  User Nanme  </div>
+
+                
+
+
+                <div >
+                    <input name="acno" formControlName="acno"  placeholder="Account Number" class="form-control mt-3" type="text">
+                </div>
+
+                <!--invalid acno-->
+            <div *ngIf="this.registerForm.get('acno')?.errors&&this.registerForm.get('acno')?.touched" class="text-danger mb-2">
+
+                Invalid account Number   </div>
+
+                <div >
+                    <input name="pswd" formControlName="pswd" type="password" placeholder="password" class="form-control mt-4">
+                </div>
+
+                    <!--invalid Password-->
+            <div *ngIf="this.registerForm.get('pswd')?.errors&&this.registerForm.get('pswd')?.touched" class="text-danger mb-2">
+
+                Invalid  Password   </div>
+
+                <div class="mt-4">
+                    <button   type="submit" class="btn btn-primary">
+                        Register
+
+                      </button>
+                      &nbsp;
+                      <span>
+                        Already a User ? Click Here to <a routerLink="/"> Login</a>
+                      </span>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

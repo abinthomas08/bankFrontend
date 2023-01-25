@@ -1,0 +1,38 @@
+9- Two way binding 
+
+    -using ngModel:
+        -Import FormsModule in appModule
+        -[[(ngModel)]]="property-name"
+        
+    -using reactiveForms : provide user input validation - Model driven forms 
+        
+        -Import ReactiveFormModule in appModule
+
+            -form  group
+            -from        array
+            -form control
+            
+
+        
+
+
+
+
+
+
+
+10. Directive - DOM Manipulation 
+    -Component Directive
+    -Structural Directive - to add/ remove html elements based on a 
+                                        condition or length of an array 
+                        
+                        -*ngIf="condition
+                        -*ngFor
+
+
+
+11. Pipe - trasform user input to another format 
+12. Parent - child communication 
+    -parent to child: Input decorator
+
+
